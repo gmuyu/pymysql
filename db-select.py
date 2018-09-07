@@ -38,8 +38,8 @@ sql4="SELECT grade FROM course WHERE courseName='工程力学'"
 cursor.execute(sql4)
 resultlist=cursor.fetchone()
 print('工程力学的成绩为'+str(resultlist[0]))
-# 查询返回字典类型
 
+# 查询返回字典类型
 cursor=connection.cursor(cursor=pymysql.cursors.DictCursor)
 cursor.execute("SELECT * FROM course")
 resultlist=cursor.fetchall()
